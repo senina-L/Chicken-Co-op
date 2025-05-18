@@ -1,0 +1,49 @@
+[gd_scene load_steps=3 format=3 uid="uid://dw2q3d573wquk"]
+
+[ext_resource type="Script" uid="uid://ckx68bvh02mob" path="res://Code/instructions.gd" id="1_7ls63"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ontcq"]
+bg_color = Color(0.299374, 0.692263, 0.445775, 1)
+
+[node name="Node" type="Node"]
+script = ExtResource("1_7ls63")
+
+[node name="Instructions" type="Panel" parent="."]
+offset_left = 2.0
+offset_top = -2.0
+offset_right = 1150.0
+offset_bottom = 650.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ontcq")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -556.0
+offset_top = -288.0
+offset_right = 570.0
+offset_bottom = 348.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "
+
+Welcome to Chicken Co-op! Here's how to play:
+
+~WASD controls the white chicken(referred to as WHITE)
+~Arrow keys controls the orange chicken(referred to as ORANGE)
+~Move around the map and try to collect chicks! (there are some unnecessary platforms, shortcuts are encouraged!)
+~Follow the arrows to eventually reach your co-op!
+~Pressing ESCAPE at any time during the game and this instruction page will bring you to the menu.
+~The game restarts every time you rejoin! this is a no-checkpoint, one time for all game!
+
+Here's the cooperative(co-op) part of the game:
+~WHITE controls the screen; the screen centers WHITE.
+~ORANGE can collect chicks and interact with objects.
+~ORANGE jumps higher than WHITE. This means ORANGE can clear gaps white can't. 
+~The chickens can stack atop each other. This will limit the bottom chicken's movement. This also means ORANGE can help WHITE reach places
+ only ORANGE could jump to.
+~If one player dies, both re-start.
+"
