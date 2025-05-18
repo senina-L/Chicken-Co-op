@@ -7,4 +7,4 @@ var score = 0
 
 func chick_collected():
 	score += 1
-	label.text = "You got back to your Co-op! You brought " + score + " chicks back with you"
+	label.text = "You got back to your Co-op! You brought " + str(score) + " chicks back with you"
